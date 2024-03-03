@@ -6,6 +6,6 @@ if (isset($_POST['updata'])) {
         $stmt = $con->prepare("UPDATE student SET name = ?, address = ? WHERE id = ?");
 $stmt->bind_param("ssi", $name, $address, $id);
 $stmt->execute();
-        $x=mysqli_query($con, $sqls);
+       // $x=mysqli_query($con, $sqls);
         header("location: home.php");
     }
